@@ -2,6 +2,7 @@ import React from "react";
 import backgroundImage from "../assets/backImage.png";
 import Zoom from "../assets/zoom.png";
 import Bull from "../assets/Freddie Bullworth 3 1.png";
+import Text from "../assets/text1.png"
 function MainSection() {
   return (
     <>
@@ -17,6 +18,14 @@ function MainSection() {
           alt="Bull"
           className="absolute top-[1%] right-[10%] w-[350px] h-[590px]"
         />
+        <div className="absolute top-[30%] left-[5%]">
+          <h1 className="text-4xl font-bold  text-[#FFFFFF]">
+            Enter The Address.We'll show
+          </h1>
+          <h1 className="text-4xl font-bold  text-[#FFFFFF]">
+            you what it's actually worth
+          </h1>
+        </div>
       </section>
     </>
   );

@@ -4,14 +4,14 @@ import Button from "./Button";
 function NabBar() {
   return (
     <nav className=" h-[90px] w-full flex">
-      <div className="px-[100px] flex w-full">
+      <div className="px-[100px] flex w-full items-center">
         <img src={logo} alt="Logo" className="h-[90px] " />
 
-        <div className=" h-[90px] py-[35px]  flex items-center w-full  ml-auto">
-          <ul className="flex gap-8 items-center h-full text-black text-[16px]">
-            <li className="text-[16px]">Home</li>
-            <li className="text-[16px]">7 Day Trial</li>
-            <li className="text-[16px]">Submit Property</li>
+        <div className=" h-[90px] py-[35px] flex items-center w-full  ml-auto">
+          <ul className="flex items-center p-[120px] gap-[32px] text-black text-[16px] whitespace-nowrap">
+            <li className="text-[16px] font-bold text-[#575665]">Home</li>
+            <li className="text-[16px] text-[#6B7280]">7 Day Trial</li>
+            <li className="text-[16px] text-[#6B7280]">Submit Property</li>
           </ul>
 
           <div className="w-[368px] h-[90px] text-[#00ACDB] flex items-center justify-end gap-2 ml-auto">
