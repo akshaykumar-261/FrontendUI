@@ -41,7 +41,7 @@ function Section3() {
               <img
                 src={Vector}
                 alt="Vector Icon"
-                className="w-[25px] h-[25px] "
+                className="w-[18px] h-[18px] "
               />
               <h3 className="text-[#1C1A1B] font-medium text-[16px]">{item}</h3>
             </div>
