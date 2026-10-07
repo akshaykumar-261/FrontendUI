@@ -27,7 +27,7 @@ function Properties() {
     {
       id: 2,
       image: House2,
-      tag: "FOR SALE",
+      tag: "WHOLESALE",
       title: "Luxury Family House",
       beds: "04",
       baths: "03",
@@ -49,7 +49,7 @@ function Properties() {
     {
       id: 4,
       image: House4,
-      tag: "FEATURED",
+      tag: "WHOLESALE",
       title: "Contemporary Villa",
       beds: "05",
       baths: "04",
@@ -71,7 +71,7 @@ function Properties() {
     {
       id: 6,
       image: House6,
-      tag: "FOR SALE",
+      tag: "WHOLESALE",
       title: "Elegant Modern House",
       beds: "04",
       baths: "03",
@@ -107,10 +107,10 @@ function Properties() {
                   />
 
                   <div
-                    className="absolute inset-0"
+                    className="absolute inset-0 "
                     style={{
                       background:
-                        "linear-gradient(90deg, rgba(200,48,235,0.20) 0%, rgba(0,172,219,0.2592) 0%, rgba(0,172,219,0) 100%)",
+                        "linear-gradient(90deg, rgba(200,48,235,0.25) 0%, rgba(0,172,219,0.26) 50%, rgba(0,172,219,0) 100%)",
                     }}
                   ></div>
                 </div>
@@ -156,7 +156,7 @@ function Properties() {
           ))}
         </div>
       </div>
-      <Button className="absolute top-[1020px] left-[570px] h-[50px] w-[150px] rounded-[8px] bg-[#CCF1F7] text-[#00ACDB] ">
+      <Button className="absolute top-[1020px] left-[640px] h-[50px] w-[150px] rounded-[8px] bg-[#CCF1F7] text-[#00ACDB] ">
         See More
       </Button>
     </div>

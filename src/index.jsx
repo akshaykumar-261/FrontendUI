@@ -7,6 +7,10 @@ import PolygonLead from './pages/PolygonLead'
 import Properties from './pages/Properties'
 import FlibPricing from './pages/FlibPricing'
 import Investor from './pages/Investor'
+import FlibbdCommunity from './pages/FlibbdCommunity'
+import Grow from './pages/Grow'
+import Leades from './pages/Leades'
+import Footer from './pages/Footer'
 function index() {
   return (
     <div>
@@ -17,7 +21,11 @@ function index() {
       <PolygonLead />
       <Properties />
       <FlibPricing />
-      <Investor/>
+      <Investor />
+      <FlibbdCommunity />
+      <Grow />
+      <Leades />
+      <Footer/>
     </div>
   )
 }

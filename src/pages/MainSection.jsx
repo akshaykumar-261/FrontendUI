@@ -20,9 +20,9 @@ function MainSection() {
         <img
           src={Bull}
           alt="Bull"
-          className="absolute top-[1%] right-[10%] w-[350px] h-[580px]"
+          className="absolute top-[9%] right-[10%] w-[350px] h-[600px]"
         />
-        <div className="absolute top-[60px] left-[470px] bg-white rounded-[50px] w-[349px] h-[44px] realtive z-10">
+        <div className="absolute top-[90px] left-[590px] bg-white rounded-[50px] w-[349px] h-[44px] realtive z-10">
           <img
             src={Vector}
             alt="Vector"
@@ -31,8 +31,14 @@ function MainSection() {
           <p className="absolute left-[45px] top-[10px]  bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent  font-semibold font-alkatra ">
             Just Real State Investments...No Bull
           </p>
+          <div
+            className="absolute left-[303px] top-[20px] w-[50px] h-[50px] bg-white rotate-[170deg]"
+            style={{
+              clipPath: "polygon(0 0, 100% 100%, 0 100%)",
+            }}
+          ></div>
         </div>
-        <div className="absolute bg-white h-[30px] w-[30px] left-[786px] top-[79px] rotate-[105deg]"></div>
+        {/* <div className="absolute bg-white h-[30px] w-[30px] left-[786px] top-[79px] rotate-[105deg]"></div> */}
         <div className="absolute top-[30%] left-[5%]">
           <h1 className="font-bold not-italic text-[50px] leading-[64px] tracking-[0%]  text-[#FFFFFF] text-shadow-[3px_4px_5px_rgba(0,0,0,0.6)]">
             Enter The Address.We'll show
