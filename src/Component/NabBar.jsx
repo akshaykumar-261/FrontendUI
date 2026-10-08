@@ -8,7 +8,7 @@ function NabBar() {
         <img src={logo} alt="Logo" className="h-[90px] shrink-0" />
 
         <div className="h-[90px] py-[35px] flex items-center w-full ml-auto">
-          <ul className="hidden lg:flex items-center absolute left-[420px] pl-[120px] gap-[32px] text-black text-[16px]">
+          <ul className="hidden lg:flex items-center absolute left-[360px] pl-[120px] gap-[32px] text-black text-[16px]">
             <li className="text-[16px] font-bold text-[#575665]">Home</li>
             <li className="text-[16px] text-[#6B7280]">7 Day Trial</li>
             <li className="text-[16px] text-[#6B7280]">Submit Property</li>

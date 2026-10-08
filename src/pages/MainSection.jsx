@@ -20,9 +20,9 @@ function MainSection() {
         <img
           src={Bull}
           alt="Bull"
-          className="absolute top-[9%] right-[10%] w-[350px] h-[600px]"
+          className="absolute top-[6%] right-[10%] w-[350px] h-[550px]"
         />
-        <div className="absolute top-[90px] left-[590px] bg-white rounded-[50px] w-[349px] h-[44px] realtive z-10">
+        <div className="absolute top-[69px] left-[480px] bg-white rounded-[50px] w-[349px] h-[44px] realtive z-10">
           <img
             src={Vector}
             alt="Vector"

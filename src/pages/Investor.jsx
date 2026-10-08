@@ -25,23 +25,23 @@ function Investor() {
       image: ChristopherImg,
     },
   ];
-  const positions = ["top-60 left-207 ", "top-30 right-80", "top-40 right-40"];
+  const positions = ["top-60 left-175 ", "top-30 right-80", "top-40 right-40"];
 
   return (
     <div className="relative mt-112 h-[500px] bg-gradient-to-r from-[#00ACDB] via-[#A6F0F7] to-[#FDE3FA] overflow-hidden">
       <div
-        className="absolute top-[60px] left-[550px] w-[800px] h-[380px] bg-cover bg-center bg-no-repeat rounded-[14px]  relative"
+        className="absolute top-[60px] left-[420px] w-[800px] h-[380px] bg-cover bg-center bg-no-repeat rounded-[14px]  relative"
         style={{ backgroundImage: `url(${TownImg})` }}
       ></div>
       <img
         src={Line1}
         alt="Line1 Icon"
-        className=" object-cover rounded-[10px] w-[290px] absolute top-[120px] left-[983px]"
+        className=" object-cover rounded-[10px] w-[280px] absolute top-[120px] left-[845px]"
       />
       <img
         src={Line2}
         alt="Line2 Icon"
-        className=" object-cover rounded-[10px] w-[350px] absolute top-[280px] left-[900px] rotate-[150deg]"
+        className=" object-cover rounded-[10px] w-[350px] absolute top-[280px] left-[780px] rotate-[150deg]"
       />
       {investorsData.map((item, index) => (
         <InvestorCard
