@@ -16,7 +16,7 @@ function PolygonLead() {
     "Underwater Mortgage",
     "Likely to Sell",
   ];
-
+  
   return (
     <div className="relative w-[1300px] max-w-full top-[320px]">
       <div className="absolute left-[100px]">
@@ -46,7 +46,7 @@ function PolygonLead() {
         </div>
       </div>
       <div
-        className="absolute top-[20px] left-[790px] w-[430px] h-[430px] bg-cover bg-center bg-no-repeat rounded-[37px]  relative"
+        className="absolute top-[20px] left-[790px] w-[430px] h-[430px] bg-cover bg-center bg-no-repeat rounded-[37px]  relative "
         style={{ backgroundImage: `url(${MapIng})` }}
       >
         <div className="bg-white rounded-[5px] h-[50px] w-[370px] absolute top-[20px] left-[30px] relative">

@@ -1,23 +1,27 @@
 import React from "react";
 import Section2Image from "../assets/GroupSection2.png";
 import Button from "../Component/Button";
+
 function Section2() {
   return (
-    <>
-      <div className="relative w-[100%] h-[400px] bg-[rgba(243,246,249,1)] flex flex-col align-center justify-center items-center gap-[30px]">
-        <p className=" bg-gradient-to-l from-[#00ACDB] to-[#C830EB] bg-clip-text text-transparent  font-semibold leading-[100%]  tracking-[0] text-[16px]">
-          GET NATIONAL EXPOUSER TO REAL ESTATE INVESTORS
-        </p>
-          <img
-            src={Section2Image}
-            alt="Section2"
-            className="w-[700px] h-[75px] "
-          />
-        <Button className="h-[49px] w-[126px] rounded-[8px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white absolute top-[300px] left-155 -translate-x-1/2">
-          Click Here
-        </Button>
-      </div>
-    </>
+    <div className="relative w-full h-[320px] sm:h-[360px] lg:h-[400px] 2xl:h-[420px] bg-[#F3F6F9] flex flex-col items-center justify-center gap-5 sm:gap-7 lg:gap-8 px-4">
+      {/* Header Text */}
+      <p className="bg-gradient-to-l from-[#00ACDB] to-[#C830EB] bg-clip-text text-transparent font-semibold leading-tight text-[11px] sm:text-sm lg:text-base 2xl:text-[17px] text-center tracking-wide">
+        GET NATIONAL EXPOSURE TO REAL ESTATE INVESTORS
+      </p>
+
+      {/* Section Image */}
+      <img
+        src={Section2Image}
+        alt="Section 2 Display"
+        className="w-[280px] sm:w-[450px] lg:w-[650px] xl:w-[700px] 2xl:w-[750px] h-auto object-contain"
+      />
+
+      {/* Action Button */}
+      <Button className="h-[42px] sm:h-[46px] lg:h-[49px] w-[110px] sm:w-[120px] lg:w-[126px] rounded-[8px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white font-medium">
+        Click Here
+      </Button>
+    </div>
   );
 }
 

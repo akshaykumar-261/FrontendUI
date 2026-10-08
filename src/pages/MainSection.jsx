@@ -2,7 +2,6 @@ import React from "react";
 import backgroundImage from "../assets/backImage.png";
 import Zoom from "../assets/zoom.png";
 import Bull from "../assets/Freddie Bullworth 3 1.png";
-import Text from "../assets/text1.png";
 import Button from "../Component/Button";
 import Search from "../assets/search-2-line.png";
 import Vector from "../assets/Vector.png";
@@ -14,8 +13,9 @@ function MainSection() {
         className="relative h-[calc(100vh-90px)] bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="absolute top-[4%] right-[2%] w-[108px] h-[103px]  bg-gradient-to-tl  from-[#1C1A1B] to-[#5B5555] rounded-[12px] flex items-center justify-center">
+        <div className="absolute top-[4%] right-[2%] w-[108px] h-[103px]  bg-gradient-to-tl  from-[#1C1A1B] to-[#5B5555] rounded-[12px]  flex flex-col items-center justify-center">
           <img src={Zoom} alt="Zoom" className="h-[38px] w-[38px]" />
+          <p className="text-white font-semibold">Join Demo</p>
         </div>
         <img
           src={Bull}
@@ -38,7 +38,6 @@ function MainSection() {
             }}
           ></div>
         </div>
-        {/* <div className="absolute bg-white h-[30px] w-[30px] left-[786px] top-[79px] rotate-[105deg]"></div> */}
         <div className="absolute top-[30%] left-[5%]">
           <h1 className="font-bold not-italic text-[50px] leading-[64px] tracking-[0%]  text-[#FFFFFF] text-shadow-[3px_4px_5px_rgba(0,0,0,0.6)]">
             Enter The Address.We'll show
