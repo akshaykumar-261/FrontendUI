@@ -156,7 +156,7 @@ function Properties() {
           ))}
         </div>
       </div>
-      <Button className="absolute top-[1020px] left-[640px] h-[50px] w-[150px] rounded-[8px] bg-[#CCF1F7] text-[#00ACDB] ">
+      <Button className="absolute top-[1020px] left-1/2 -translate-x-1/2 h-[50px] w-[150px] rounded-[8px] bg-[#CCF1F7] text-[#00ACDB] ">
         See More
       </Button>
     </div>

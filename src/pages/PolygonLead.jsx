@@ -18,7 +18,7 @@ function PolygonLead() {
   ];
 
   return (
-    <div className="relative w-full w-[1300px] top-[320px]">
+    <div className="relative w-[1300px] max-w-full top-[320px]">
       <div className="absolute left-[100px]">
         <div className="flex items-center gap-2 text-[32px] font-semibold">
           <span className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent">

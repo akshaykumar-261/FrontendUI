@@ -34,7 +34,7 @@ function FlibbdCommunity() {
   ];
   return (
     <div className="relative h-[600px] w-full flex items-center justify-center">
-      <div className="h-[400px] w-[300px] w-[1300px] relative">
+      <div className="h-[400px] w-[1300px] max-w-full relative">
         <div className=" flex justify-center gap-3">
           <span className="text-[35px]  font-bold text-[#575665]">
             See what our

@@ -17,7 +17,7 @@ import Button from "../Component/Button";
 import BuildingImg from "../assets/Building.png";
 function Footer() {
   return (
-    <div className="h-[800px] w-full relative">
+    <div className="h-[800px] w-full relative overflow-hidden">
       <div
         className="relative h-[400px] bg-red-600 bg-cover bg-center"
         style={{
@@ -198,16 +198,16 @@ function Footer() {
                 Send
               </Button>
             </div>
-            <div className="flex gap-2 w-[139px] h-[40px]">
+            <div className="flex gap-2 h-[40px]">
               <img
                 src={AppFotter}
                 alt="AppFotter Icon"
-                className=" object-cover rounded-[10px] w-[600px]"
+                className=" object-cover rounded-[10px] h-[40px] w-auto max-w-[139px]"
               />
               <img
                 src={GoogleFotter}
                 alt="GoogleFotter Icon"
-                className=" object-cover shrink-0 rounded-[10px]"
+                className=" object-contain rounded-[10px] h-[40px] w-auto shrink-0"
               />
             </div>
           </div>

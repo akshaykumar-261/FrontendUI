@@ -13,7 +13,7 @@ function Section2() {
             alt="Section2"
             className="w-[700px] h-[75px] "
           />
-        <Button className="h-[49px] w-[126px] rounded-[8px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white absolute top-[300px] left-[625px]">
+        <Button className="h-[49px] w-[126px] rounded-[8px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white absolute top-[300px] left-1/2 -translate-x-1/2">
           Click Here
         </Button>
       </div>
