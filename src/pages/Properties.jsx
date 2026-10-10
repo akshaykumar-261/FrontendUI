@@ -1,4 +1,3 @@
-import React from "react";
 import House1 from "../assets/House1.png";
 import House2 from "../assets/House2.png";
 import House3 from "../assets/House3.png";
@@ -11,6 +10,7 @@ import Bed from "../assets/tabler_bed-filled.png";
 import Icon from "../assets/iconoir_bathroom-solid.svg";
 import TableBed from "../assets/tabler_bed-filled.svg";
 import Map from "../assets/ri_map-pin-fill.svg";
+
 function Properties() {
   const propertiesData = [
     {
@@ -82,84 +82,86 @@ function Properties() {
   ];
 
   return (
-    <div className="relative bg-[#F3F6F9] top-[450px] min-h-[1100px] py-10 px-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Heading Section */}
-        <div className="flex items-center justify-center gap-2 text-[32px] font-semibold mb-12">
+    <section className="w-full bg-[#F3F6F9] px-4 py-16 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-6xl">
+        {/* Heading */}
+        <div className="mb-12 flex items-center justify-center gap-2 text-[26px] font-semibold sm:text-[32px]">
           <span className="text-[#575665]">New</span>
           <span className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent">
             Properties
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {propertiesData.map((item) => (
             <div
               key={item.id}
-              className="bg-white h-[400px] w-full rounded-[10px] shadow-lg  p-2 flex flex-col justify-between "
+              className="flex w-full flex-col overflow-hidden rounded-[10px] bg-white shadow-lg"
             >
               <div className="relative">
-                <div className="relative">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-48 object-cover rounded-[10px]"
-                  />
-
-                  <div
-                    className="absolute inset-0 "
-                    style={{
-                      background:
-                        "linear-gradient(90deg, rgba(200,48,235,0.25) 0%, rgba(0,172,219,0.26) 50%, rgba(0,172,219,0) 100%)",
-                    }}
-                  ></div>
-                </div>
-                <div className="absolute left-[12px] top-[210px]">
-                  <span className="text-[15px] font-bold tracking-wider bg-gradient-to-r from-[#C830EB] to-[#00ACDB] bg-clip-text text-transparent">
-                    {item.tag}
-                  </span>
-                  <h3 className="text-lg font-bold text-[#575665] mt-1">
-                    {item.title}
-                  </h3>
-
-                  <div className="flex items-center gap-4 text-xs text-[#6B747B] my-2">
-                    <div className="flex items-center gap-1">
-                      <img src={Bed} />
-                      <span> {item.beds}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <img src={Icon} />
-                      <span> {item.baths}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <img src={TableBed} />
-                      <span> {item.sqft}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-1 text-xs text-[#6B747B] truncate">
-                    <img src={Map} />
-                    {item.address}
-                  </div>
-                </div>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-48 w-full object-cover"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, rgba(200,48,235,0.25) 0%, rgba(0,172,219,0.26) 50%, rgba(0,172,219,0) 100%)",
+                  }}
+                />
               </div>
 
-              <div className="flex items-center justify-between relative">
-                <Button className="absolute top-[-50px] left-[12px] h-[40px] w-[150px] rounded-[8px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white">
-                  View Details
-                </Button>
-                <span className="text-[#575665] font-semibold absolute top-[-40px] left-[260px]">
-                  <img src={Dollar} className="absolute left-[-25px]" />
-                  {item.price}
+              <div className="flex flex-1 flex-col p-4">
+                <span className="bg-gradient-to-r from-[#C830EB] to-[#00ACDB] bg-clip-text text-[15px] font-bold tracking-wider text-transparent">
+                  {item.tag}
                 </span>
+                <h3 className="mt-1 text-lg font-bold text-[#575665]">
+                  {item.title}
+                </h3>
+
+                <div className="my-2 flex items-center gap-4 text-xs text-[#6B747B]">
+                  <div className="flex items-center gap-1">
+                    <img src={Bed} alt="beds" />
+                    <span>{item.beds}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <img src={Icon} alt="baths" />
+                    <span>{item.baths}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <img src={TableBed} alt="sqft" />
+                    <span>{item.sqft}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-1 truncate text-xs text-[#6B747B]">
+                  <img src={Map} alt="map" />
+                  {item.address}
+                </div>
+
+                <div className="mt-4 flex items-center justify-between gap-2">
+                  <Button className="h-[40px] w-[140px] rounded-[8px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white">
+                    View Details
+                  </Button>
+                  <span className="flex items-center gap-1 font-semibold text-[#575665]">
+                    <img src={Dollar} alt="price" className="h-4 w-4" />
+                    {item.price}
+                  </span>
+                </div>
               </div>
             </div>
           ))}
         </div>
+
+        <div className="mt-12 flex justify-center">
+          <Button className="h-[50px] w-[150px] rounded-[8px] bg-[#CCF1F7] text-[#00ACDB]">
+            See More
+          </Button>
+        </div>
       </div>
-      <Button className="absolute top-[1020px] left-[640px] h-[50px] w-[150px] rounded-[8px] bg-[#CCF1F7] text-[#00ACDB] ">
-        See More
-      </Button>
-    </div>
+    </section>
   );
 }
 

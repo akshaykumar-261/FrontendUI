@@ -1,4 +1,3 @@
-import React from "react";
 import Vector from "../assets/Vector 2.png";
 import LaptopImg from "../assets/LaptopImg.png";
 import Silver from "../assets/Silver.png";
@@ -8,6 +7,7 @@ import HutSearch from "../assets/hutSearch.png";
 import HutRect from "../assets/HutRect.png";
 import HutTick from "../assets/HutBlueTick.png";
 import HandImg from "../assets/HandImg.png";
+
 function Section3() {
   const featuresList = [
     "Source Off-Market Deals",
@@ -18,113 +18,99 @@ function Section3() {
     "FlippBidd One Touch",
     "National Skiptracing, and More...",
   ];
+
   return (
-    <>
-      <div className="relative">
-        <div className="relative">
-          <p className="font-semibold bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent text-[27px] top-[50px] left-[100px] absolute">
-            FlipBidd
-          </p>
-          <p className=" absolute text-[27px] top-[50px] left-[220px] font-semibold text-[#575665]">
-            Key
-          </p>
-          <p className="absolute text-[25px] font-bold font-semibold text-[#575665] top-[90px] left-[100px] ">
-            Features
-          </p>
+    <section className="relative mx-auto max-w-[1400px] px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
+      <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-4">
+        {/* Left: heading + features */}
+        <div className="w-full lg:max-w-[520px]">
+          <h2 className="text-[27px] font-semibold">
+            <span className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent">
+              FlipBidd
+            </span>{" "}
+            <span className="text-[#575665]">Key</span>
+          </h2>
+          <p className="text-[25px] font-bold text-[#575665]">Features</p>
+
+          <div className="mt-8 flex flex-col gap-4">
+            {featuresList.map((item, index) => (
+              <div
+                key={index}
+                className="flex h-[71px] w-full max-w-[450px] items-center gap-5 rounded-[14px] bg-white px-6 shadow-[0_4px_12px_rgba(0,0,0,0.06)]"
+              >
+                <img src={Vector} alt="Vector Icon" className="h-[18px] w-[18px]" />
+                <h3 className="text-[16px] font-medium text-[#1C1A1B]">{item}</h3>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className=" absolute top-[150px] left-[80px] flex flex-col gap-4 w-[650px]">
-          {featuresList.map((item, index) => (
+
+        {/* Right: scalable decorative graphic */}
+        <div className="relative h-[300px] w-full overflow-hidden sm:h-[420px] lg:h-[580px] lg:flex-1">
+          <div className="absolute left-1/2 top-0 h-[580px] w-[660px] origin-top [transform:translateX(-50%)_scale(0.5)] sm:[transform:translateX(-50%)_scale(0.7)] lg:[transform:translateX(-50%)_scale(1)]">
+            {/* Gradient circle */}
+            <div className="absolute left-[50px] top-[30px] h-[518px] w-[518px] rounded-[50%] bg-gradient-to-r from-[#A6F0F7] to-[#FDE3FA]">
+              <div className="absolute left-[34px] top-[120px] flex h-[278px] w-[453px] items-center justify-center bg-black">
+                <img src={LaptopImg} alt="LaptopImg" className="h-[250px] w-[430px]" />
+              </div>
+            </div>
+
+            {/* FlippBidd One Touch pill */}
+            <div className="absolute left-[390px] top-[100px] flex h-[55px] w-[220px] items-center justify-center rounded-[14px] bg-gradient-to-r from-[#003F79] to-[#00ACDB]">
+              <div className="absolute left-[1px] top-[1px] flex h-[53px] w-[218px] items-center justify-center rounded-[13px] bg-white">
+                <p className="text-[17px] text-[#00ACDB]">FlippBidd One Touch</p>
+              </div>
+            </div>
+
+            {/* Sell My Deal */}
+            <div className="absolute left-[20px] top-[102px] flex h-[55px] w-[196px] items-center justify-center rounded-[14px] border border-[#00ACDB] bg-white">
+              <p className="text-[#00ACDB]">Sell My Deal</p>
+            </div>
+
+            {/* Phone mockup */}
             <div
-              key={index}
-              className="bg-white rounded-[14px] w-[450px] h-[71px] flex items-center gap-5 shadow-[0_4px_12px_rgba(0,0,0,0.06)] "
+              className="absolute left-[430px] top-[230px] flex h-[261px] w-[132px] items-center justify-center bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${Silver})` }}
             >
-              <img
-                src={Vector}
-                alt="Vector Icon"
-                className="w-[18px] h-[18px] "
-              />
-              <h3 className="text-[#1C1A1B] font-medium text-[16px]">{item}</h3>
+              <img src={Mockup} alt="Mockup" className="h-[256px] w-[118px] object-contain" />
             </div>
-          ))}
-        </div>
-          <div className="rounded-[50%] absolute top-[180px] left-[650px] h-[518px] w-[518px] bg-gradient-to-r from-[#A6F0F7]  to-[#FDE3FA] relative">
-            <div className="bg-black h-[278px] w-[453px] absolute top-[120px] left-[34px] flex items-center justify-center">
-              <img
-                src={LaptopImg}
-                alt="LaptopImg"
-                className="h-[250px] w-[430px]"
-              />
-            </div>
-            <div className="absolute top-[70px] left-[340px] w-[220px] h-[55px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] rounded-[14px] z-0 flex items-center justify-center">
-              <div className="absolute top-[1px] left-[1px] bg-white rounded-[13px] w-[218px] h-[53px] flex items-center justify-center">
-                <p className="text-[#00ACDB] text-[17px]">
-                  FlippBidd One Touch
+
+            {/* Contract Holders */}
+            <div className="absolute left-[450px] top-[400px] flex h-[50px] w-[190px] items-center justify-center rounded-[14px] bg-gradient-to-r from-[#C830EB] to-[#00ACDB]">
+              <div className="absolute left-[1px] top-[1px] flex h-[47px] w-[188px] items-center justify-center rounded-[13px] bg-white">
+                <p className="bg-gradient-to-l from-[#00ACDB] to-[#C830EB] bg-clip-text text-[17px] text-transparent">
+                  Contract Holders
                 </p>
               </div>
             </div>
-          </div>
-          <div className="absolute left-[620px] top-[252px] w-[196px] h-[55px] border border-[#00ACDB] rounded-[14px] flex items-center justify-center bg-white">
-            <p className="text-[#00ACDB]">Sell My Deal</p>
-          </div>
-          <div
-            className="absolute top-[380px] left-[1030px] w-[132px] h-[261px] bg-cover bg-center bg-no-repeat flex items-center justify-center"
-            style={{ backgroundImage: `url(${Silver})` }}
-          >
-            <img
-              src={Mockup}
-              alt="Mockup"
-              className="w-[118px] h-[256px] object-contain"
-            />
-          </div>
-          <div className="absolute top-[550px] left-[1050px] w-[190px] h-[50px] bg-gradient-to-r from-[#C830EB] to-[#00ACDB] rounded-[14px] z-0 flex items-center justify-center">
-            <div className="absolute top-[1px] left-[1px] bg-white rounded-[13px] w-[188px] h-[47px] flex items-center justify-center">
-              <p className="text-[#00ACDB] text-[17px] bg-gradient-to-l from-[#00ACDB] to-[#C830EB] bg-clip-text text-transparent">
-                Contract Holders
+
+            {/* Find My Lead */}
+            <div className="absolute left-[120px] top-[510px] flex h-[55px] w-[196px] items-center justify-center rounded-[13px] border border-[#575665] bg-white">
+              <p className="bg-gradient-to-r from-[#9AA1AB] to-[#575665] bg-clip-text text-[17px] text-transparent">
+                Find My Lead
               </p>
             </div>
-          </div>
-          <div className="absolute top-[660px] left-[720px] border border-[#575665] bg-white rounded-[13px] w-[196px] h-[55px] flex items-center justify-center">
-            <p className="text-[#00ACDB] text-[17px] bg-gradient-to-r from-[#9AA1AB] to-[#575665] bg-clip-text text-transparent">
-              Find My Lead
-            </p>
-          </div>
-          <div className="absolute rounded-[50%] bg-white h-[65px] w-[65px] top-[476px] left-[1170px] shadow-[0px_10.85px_43.38px_rgba(219,222,225,1)] realtive">
-            <img
-              src={HutIcon}
-              alt="HutIcon"
-              className=" object-contain absolute left-[8px] top-[7px] "
-            />
-          </div>
-          <div className="absolute rounded-[50%] bg-white h-[65px] w-[65px] top-[550px] left-[720px] realtive">
-            <img
-              src={HutSearch}
-              alt="HutSearch"
-              className=" object-contain absolute left-[10px] top-[10px] "
-            />
-          </div>
-          <div className="absolute rounded-[50%] bg-white h-[65px] w-[65px] top-[180px] left-[740px] realtive">
-            <img
-              src={HutRect}
-              alt="HutRect"
-              className=" object-contain absolute left-[8px] top-[7px]  "
-            />
-          </div>
-          <div className="absolute rounded-[50%] bg-white h-[80px] w-[80px] top-[160px] left-[1000px] flex items-center justify-center">
-            <div className="rounded-[50%] bg-gradient-to-r from-[#003F79] to-[#00ACDB] h-[70px] w-[70px]">
-              <img
-                src={HutTick}
-                alt="HutSearch"
-                className=" object-contain absolute h-[35px] left-[14px] top-[13px] "
-              />
-              <img
-                src={HandImg}
-                alt="HandImg"
-                className=" object-contain absolute h-[35px] left-[30px] top-[36px] "
-              />
+
+            {/* Floating hut icons */}
+            <div className="absolute left-[570px] top-[326px] h-[65px] w-[65px] rounded-[50%] bg-white shadow-[0px_10.85px_43.38px_rgba(219,222,225,1)]">
+              <img src={HutIcon} alt="HutIcon" className="absolute left-[8px] top-[7px] object-contain" />
+            </div>
+            <div className="absolute left-[120px] top-[400px] h-[65px] w-[65px] rounded-[50%] bg-white">
+              <img src={HutSearch} alt="HutSearch" className="absolute left-[10px] top-[10px] object-contain" />
+            </div>
+            <div className="absolute left-[140px] top-[30px] h-[65px] w-[65px] rounded-[50%] bg-white">
+              <img src={HutRect} alt="HutRect" className="absolute left-[8px] top-[7px] object-contain" />
+            </div>
+            <div className="absolute left-[400px] top-[10px] flex h-[80px] w-[80px] items-center justify-center rounded-[50%] bg-white">
+              <div className="h-[70px] w-[70px] rounded-[50%] bg-gradient-to-r from-[#003F79] to-[#00ACDB]">
+                <img src={HutTick} alt="HutTick" className="absolute left-[14px] top-[13px] h-[35px] object-contain" />
+                <img src={HandImg} alt="HandImg" className="absolute left-[30px] top-[36px] h-[35px] object-contain" />
+              </div>
             </div>
           </div>
         </div>
-    </>
+      </div>
+    </section>
   );
 }
 

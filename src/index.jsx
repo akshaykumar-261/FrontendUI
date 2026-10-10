@@ -1,4 +1,3 @@
-import React from 'react'
 import NabBar from './Component/NabBar'
 import MainSection from './pages/MainSection'
 import Section2 from './pages/Section2'
