@@ -1,77 +1,69 @@
-import React from "react";
 import backgroundImage from "../assets/backImage.png";
 import Zoom from "../assets/zoom.png";
 import Bull from "../assets/Freddie Bullworth 3 1.png";
-import Text from "../assets/text1.png";
 import Button from "../Component/Button";
 import Search from "../assets/search-2-line.png";
 import Vector from "../assets/Vector.png";
 import Group from "../assets/Group 568.png";
+
 function MainSection() {
   return (
-    <>
-      <section
-        className="relative h-[calc(100vh-90px)] bg-cover bg-center"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        <div className="absolute top-[4%] right-[2%] w-[108px] h-[103px]  bg-gradient-to-tl  from-[#1C1A1B] to-[#5B5555] rounded-[12px] flex items-center justify-center">
-          <img src={Zoom} alt="Zoom" className="h-[38px] w-[38px]" />
-        </div>
-        <img
-          src={Bull}
-          alt="Bull"
-          className="absolute top-[9%] right-[10%] w-[350px] h-[600px]"
-        />
-        <div className="absolute top-[90px] left-[590px] bg-white rounded-[50px] w-[349px] h-[44px] realtive z-10">
-          <img
-            src={Vector}
-            alt="Vector"
-            className="absolute left-[13px] top-[10px] w-[22px] h-[20px]"
-          />
-          <p className="absolute left-[45px] top-[10px]  bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent  font-semibold font-alkatra ">
+    <section
+      className="relative min-h-[calc(100vh-70px)] w-full overflow-hidden bg-cover bg-center sm:min-h-[calc(100vh-90px)]"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      {/* Dark overlay for readability on small screens */}
+      <div className="absolute inset-0 bg-black/40 lg:bg-transparent" />
+
+      {/* Decorative bull (desktop only) */}
+      <img
+        src={Bull}
+        alt="Bull"
+        className="absolute right-[6%] top-[10%] hidden h-[600px] w-[350px] object-contain lg:block"
+      />
+
+      {/* Zoom badge */}
+      <div className="absolute right-4 top-4 z-20 flex h-[70px] w-[70px] items-center justify-center rounded-[12px] bg-gradient-to-tl from-[#1C1A1B] to-[#5B5555] sm:right-[2%] sm:top-[4%] sm:h-[90px] sm:w-[95px] lg:h-[103px] lg:w-[108px]">
+        <img src={Zoom} alt="Zoom" className="h-[28px] w-[28px] sm:h-[38px] sm:w-[38px]" />
+      </div>
+
+      <div className="relative z-10 mx-auto flex max-w-[1400px] flex-col px-4 pb-12 pt-10 sm:px-6 lg:px-10 lg:pt-24">
+        {/* Tagline pill */}
+        <div className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2">
+          <img src={Vector} alt="Vector" className="h-[18px] w-[20px]" />
+          <p className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text font-alkatra font-semibold text-transparent text-sm sm:text-base">
             Just Real State Investments...No Bull
           </p>
-          <div
-            className="absolute left-[303px] top-[20px] w-[50px] h-[50px] bg-white rotate-[170deg]"
-            style={{
-              clipPath: "polygon(0 0, 100% 100%, 0 100%)",
-            }}
-          ></div>
         </div>
-        {/* <div className="absolute bg-white h-[30px] w-[30px] left-[786px] top-[79px] rotate-[105deg]"></div> */}
-        <div className="absolute top-[30%] left-[5%]">
-          <h1 className="font-bold not-italic text-[50px] leading-[64px] tracking-[0%]  text-[#FFFFFF] text-shadow-[3px_4px_5px_rgba(0,0,0,0.6)]">
-            Enter The Address.We'll show
-          </h1>
-          <h1 className="font-bold not-italic text-[50px] leading-[64px] tracking-[0%]  text-[#FFFFFF] text-shadow-[3px_4px_5px_rgba(0,0,0,0.6)]">
-            you what it's actually worth
-          </h1>
-        </div>
-        <div className="absolute left-[70px] top-[330px] bg-white w-[680px] h-[55px] rounded-[10px] relative">
-          <Button className=" absolute left-[512px] top-[5px] w-[163px] h-[45px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] rounded-[8px] text-white  ">
+
+        {/* Heading */}
+        <h1 className="mt-8 max-w-[760px] text-3xl font-bold leading-tight tracking-[0%] text-white drop-shadow-[3px_4px_5px_rgba(0,0,0,0.6)] sm:text-4xl lg:mt-16 lg:text-[50px] lg:leading-[64px]">
+          Enter The Address. We'll show you what it's actually worth
+        </h1>
+
+        {/* Search bar */}
+        <div className="mt-8 flex w-full max-w-[680px] items-center gap-2 rounded-[10px] bg-white p-2 sm:mt-10">
+          <img src={Search} alt="Search" className="ml-2 h-[24px] w-[24px] shrink-0" />
+          <input
+            type="text"
+            placeholder="Search Property..."
+            className="min-w-0 flex-1 bg-transparent text-[#9593A2] outline-none"
+          />
+          <Button className="h-[45px] shrink-0 rounded-[8px] bg-gradient-to-r from-[#003F79] to-[#00ACDB] px-5 text-white sm:px-8">
             Search
           </Button>
-          <img
-            src={Search}
-            alt="Search"
-            className="absolute left-[20px] top-[15px] w-[24px] h-[24px]"
-          />
-          <p className="absolute left-[55px] top-[15px] text-[#9593A2]">
-            Search Property...
-          </p>
-          <p className="absolute left-[5px] top-[80px] font-semibold text-[28px] leading-[100%] tracking-[-1%] text-white drop-shadow-[0_4px_6px_rgba(0,0,0,0.33)] [-webkit-text-stroke:1px_rgba(0,0,0,1)]">
-            Download it.Use it.Pay when it makes sense.
-          </p>
         </div>
-        <div className="absolute left-[73px] top-[460px] w-[322px] h-[58px] bg-white rounded-[13px] ">
-          <img
-            src={Group}
-            alt="Group"
-            className=" absolute top-[4px] left-[3px] w-[314px] h-[49px]"
-          />
+
+        <p className="mt-5 max-w-[680px] text-lg font-semibold leading-snug text-white drop-shadow-[0_4px_6px_rgba(0,0,0,0.33)] [-webkit-text-stroke:1px_rgba(0,0,0,1)] sm:text-2xl">
+          Download it. Use it. Pay when it makes sense.
+        </p>
+
+        {/* App store badges */}
+        <div className="mt-6 w-[240px] rounded-[13px] bg-white p-1 sm:w-[322px]">
+          <img src={Group} alt="Group" className="h-auto w-full" />
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 

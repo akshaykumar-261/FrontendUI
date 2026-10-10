@@ -1,6 +1,6 @@
-import React from "react";
-import TickIcon from "../assets/TickIcon.svg"
+import TickIcon from "../assets/TickIcon.svg";
 import Button from "../Component/Button";
+
 function FlibPricing() {
   const pricingPlans = [
     {
@@ -44,65 +44,55 @@ function FlibPricing() {
         "500 Property Reports",
         "200 SkipTraces/Month",
       ],
-      buttonText: "Subscribe"
+      buttonText: "Subscribe",
     },
   ];
 
   return (
-    <div
-      className="relative  top-[450px] min-h-[550px] py-16 px-4"
+    <section
+      className="w-full px-4 py-16 sm:px-6 lg:px-10"
       style={{
         background:
           "linear-gradient(90deg, rgba(200,48,235,0.3) 0%, rgba(0,172,219,0.2592) 0%, rgba(0,172,219,0) 100%)",
       }}
     >
-      <div className="max-w-6xl mx-auto">
-        {/* Header Title Section */}
-        <div className="flex items-center justify-center gap-2 text-[32px] font-semibold mb-16">
+      <div className="mx-auto max-w-6xl">
+        {/* Header */}
+        <div className="mb-16 flex flex-wrap items-center justify-center gap-2 text-center text-[26px] font-semibold sm:text-[32px]">
           <span className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent">
             FlippBidd
           </span>
-          <span className="text-[#575665]">Pricing & Plans</span>
+          <span className="text-[#575665]">Pricing &amp; Plans</span>
         </div>
-        <div className="relative">
-          <div
-            className="absolute bg-[#0AA6DC6B] top-[-26px] left-[580px] h-[50px] w-[50px]"
-            style={{
-              clipPath: "polygon(50% 0%, 100% 100%, 0% 100%)",
-            }}
-          ></div>
-          <div
-            className="absolute top-[-25px] left-[405px] bg-gradient-to-r from-[#AF16CD] to-[#00ACDB] h-[45px] w-[200px] z-3 rounded-tl-2xl flex items-center"
-            style={{
-              clipPath: "polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)",
-            }}
-          >
-            <p className="ml-3 text-white font-semibold"> GET A 7-DAY TRIAL </p>
-          </div>
-        </div>
-        {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center ">
+
+        {/* Pricing Cards */}
+        <div className="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-3">
           {pricingPlans.map((plan) => (
             <div
               key={plan.id}
-              className={`relative bg-white w-[340px] rounded-2xl shadow-md overflow-hidden flex flex-col`}
+              className="relative flex w-full max-w-[340px] flex-col overflow-hidden rounded-2xl bg-white shadow-md"
             >
-              <div className="p-8 flex-1 flex flex-col ">
+              {plan.badge && (
+                <div className="flex items-center justify-center bg-gradient-to-r from-[#AF16CD] to-[#00ACDB] py-2 text-sm font-semibold text-white md:hidden">
+                  {plan.badge}
+                </div>
+              )}
+              <div className="flex flex-1 flex-col p-8">
                 <div className="mb-6">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-3xl font-extrabold bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#003F79] to-[#00ACDB] bg-clip-text text-3xl font-extrabold text-transparent">
                       {plan.price}
                     </span>
                     <span className="text-xs font-semibold text-[#00ACDB]">
                       {plan.period}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-[#2B3842] mt-1">
+                  <h3 className="mt-1 text-lg font-bold text-[#2B3842]">
                     {plan.title}
                   </h3>
                 </div>
-                <hr className="border-gray-100 mb-6" />
-                <ul className="space-y-4 mb-8 flex-1">
+                <hr className="mb-6 border-gray-100" />
+                <ul className="mb-8 flex-1 space-y-4">
                   {plan.features.map((feature, index) => (
                     <li
                       key={index}
@@ -114,10 +104,7 @@ function FlibPricing() {
                   ))}
                 </ul>
 
-                {/* Action Button */}
-                <Button
-                  className={`w-full py-3 rounded-lg text-sm font-semibold bg-gradient-to-r from-[#003F79] to-[#00ACDB] text-white`}
-                >
+                <Button className="w-full rounded-lg bg-gradient-to-r from-[#003F79] to-[#00ACDB] py-3 text-sm font-semibold text-white">
                   {plan.buttonText}
                 </Button>
               </div>
@@ -125,7 +112,7 @@ function FlibPricing() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
