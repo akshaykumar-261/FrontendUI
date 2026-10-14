@@ -48,7 +48,7 @@ function Investor() {
         <img
           src={Line2}
           alt="Line2 Icon"
-          className="absolute left-[6%] top-[45%] w-[78%] rotate-[150deg] sm:left-[6%] sm:top-[36%] sm:w-[76%] md:left-[45%] md:top-[58%] md:w-[44%] pointer-events-none select-none"
+          className="absolute left-[6%] top-[45%] w-[78%] rotate-[150deg] sm:left-[6%] sm:top-[36%] sm:w-[76%] md:left-[45%] md:top-[58%] xl:left-[350px] md:w-[44%] pointer-events-none select-none"
         />
 
         {/* ================= INVESTOR CARDS (always inside the town) ================= */}

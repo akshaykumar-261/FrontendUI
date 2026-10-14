@@ -155,7 +155,7 @@ function MainSection() {
           md:h-[44px]
 
           xl:top-[6%]
-          xl:w-[349px]
+          xl:w-[300px]
           xl:h-[44px]
           xl:right-[310px]
 
